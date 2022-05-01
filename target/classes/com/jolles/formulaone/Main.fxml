@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jolles.formulaone.MainController">
+   <children>
+      <Label layoutX="42.0" layoutY="44.0" text="Name" />
+      <TextField fx:id="nameField" layoutX="42.0" layoutY="62.0" promptText="ex. Max Verstappen" />
+      <Label layoutX="42.0" layoutY="112.0" text="Team Name" />
+      <TextField fx:id="teamNameField" layoutX="42.0" layoutY="130.0" promptText="ex. Redbull Racing" />
+      <Label layoutX="42.0" layoutY="182.0" text="Number" />
+      <TextField fx:id="numberField" layoutX="39.0" layoutY="200.0" onAction="#submit" promptText="ex. 33" />
+      <Button fx:id="submitButton" layoutX="36.0" layoutY="263.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="394.0" layoutY="6.0">
+         <image>
+            <Image url="@assets/McLaren.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="66.0" layoutY="27.0" text="Create New Racers" />
+      <ButtonBar layoutX="262.0" layoutY="123.0" prefHeight="40.0" prefWidth="307.0">
+        <buttons>
+          <Button fx:id="raceButton" mnemonicParsing="false" onAction="#switchToRace" text="Race" />
+            <Button fx:id="viewDriversButton" mnemonicParsing="false" onAction="#switchToDrivers" text="View Drivers" />
+            <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#switchToSettings" text="Settings" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="statusLabel" layoutX="205.0" layoutY="193.0" prefHeight="40.0" prefWidth="151.0" />
+      <Button fx:id="readMeButton" layoutX="520.0" layoutY="360.0" mnemonicParsing="false" onAction="#about" text="Read Me" />
+   </children>
+</AnchorPane>
