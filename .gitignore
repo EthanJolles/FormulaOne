@@ -1,0 +1,16 @@
+/target/
+*.class
+target/classes/com/jolles/formulaone/RaceController.class
+*.xml
+target/classes/module-info.class
+target/classes/com/jolles/formulaone/utils/UserSerialization.class
+target/classes/com/jolles/formulaone/users/Users.bin
+target/classes/com/jolles/formulaone/SettingsController.class
+target/classes/com/jolles/formulaone/Settings.fxml
+target/classes/com/jolles/formulaone/RaceController.class
+target/classes/com/jolles/formulaone/Race.fxml
+target/classes/com/jolles/formulaone/model/UserModel.class
+target/classes/com/jolles/formulaone/MainController.class
+target/classes/com/jolles/formulaone/Main.class
+target/classes/com/jolles/formulaone/DriversController.class
+target/classes/com/jolles/formulaone/About.fxml
