@@ -1,13 +1,26 @@
 package com.jolles.formulaone.model;
 
+//Name - Ethan Jolles
+//Professor - Frank Seidel
+//Class - CMIS 201 ONL1
+//File name - RacerModel.java
+
 //This class will be used to house more comprehensive information about Users, their stats and records
 public class RacerModel extends UserModel {
+
+    public RacerModel() {
+        super();
+    }
 
     public RacerModel(String name, String teamName, int number, double reliability, double pace, double racecraft) {
         super(name, teamName, number);
         this.reliability = reliability;
         this.pace = pace;
         this.racecraft = racecraft;
+    }
+
+    public RacerModel(String name, String teamName, int number) {
+        super(name, teamName, number);
     }
 
     private double reliability;

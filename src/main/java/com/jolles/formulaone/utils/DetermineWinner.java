@@ -1,9 +1,15 @@
 package com.jolles.formulaone.utils;
 
+//Name - Ethan Jolles
+//Professor - Frank Seidel
+//Class - CMIS 201 ONL1
+//File name - DetermineWinner.java
+
 import com.jolles.formulaone.model.RacerModel;
 
 import java.util.Random;
 
+//Utility class used to determine winner of a race based on stats and luck
 public class DetermineWinner {
 
     private DetermineWinner() {}

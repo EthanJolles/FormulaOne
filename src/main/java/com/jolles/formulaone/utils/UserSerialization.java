@@ -1,5 +1,10 @@
 package com.jolles.formulaone.utils;
 
+//Name - Ethan Jolles
+//Professor - Frank Seidel
+//Class - CMIS 201 ONL1
+//File name - UserSerialization.java
+
 import com.jolles.formulaone.model.UserModel;
 
 import java.io.*;

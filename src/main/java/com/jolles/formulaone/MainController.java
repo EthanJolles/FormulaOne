@@ -1,5 +1,10 @@
 package com.jolles.formulaone;
 
+//Name - Ethan Jolles
+//Professor - Frank Seidel
+//Class - CMIS 201 ONL1
+//File name - MainController.java
+
 import com.jolles.formulaone.model.UserModel;
 import com.jolles.formulaone.utils.UserSerialization;
 import javafx.event.ActionEvent;
