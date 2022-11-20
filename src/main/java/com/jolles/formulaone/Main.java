@@ -5,6 +5,8 @@ package com.jolles.formulaone;
 //Class - CMIS 201 ONL1
 //File name - Main.java
 
+import com.jolles.formulaone.model.RacerModel;
+import com.jolles.formulaone.model.UserModel;
 import com.jolles.formulaone.utils.RecursionImpl;
 import com.jolles.formulaone.utils.UserSerialization;
 import javafx.application.Application;
@@ -14,7 +16,10 @@ import javafx.scene.Scene;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Stack;
 
 public class Main extends Application {
 
@@ -40,6 +45,22 @@ public class Main extends Application {
         UserSerialization.ensureMasterFileNotNull();
 
         RecursionImpl.recursion(10);
+
+        Stack<RacerModel> stack = new Stack();
+
+        List<UserModel> userArray = UserSerialization.read();
+
+        for (UserModel user : userArray) {
+            stack.add((RacerModel) user);
+        }
+
+        for (UserModel user : stack) {
+            stack.remove(user);
+        }
+
+        for (UserModel user : stack) {
+            stack.pop();
+        }
 
         launch();
     }

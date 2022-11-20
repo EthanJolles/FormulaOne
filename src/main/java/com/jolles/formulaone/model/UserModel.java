@@ -6,6 +6,7 @@ package com.jolles.formulaone.model;
 //File name - UserModel.java
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Objects;
 
 
@@ -23,6 +24,7 @@ public class UserModel implements Serializable {
     }
 
     private String name;
+    private HashMap<String, String> driverMap = new HashMap<>();
     private String teamName;
     private int number;
 
@@ -32,6 +34,14 @@ public class UserModel implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public HashMap<String, String> getDriverMap() {
+        return driverMap;
+    }
+
+    public void setDriverMap(HashMap<String, String> driverMap) {
+        this.driverMap = driverMap;
     }
 
     public String getTeamName() {
