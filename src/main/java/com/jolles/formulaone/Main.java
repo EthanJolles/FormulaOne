@@ -7,6 +7,7 @@ package com.jolles.formulaone;
 
 import com.jolles.formulaone.model.RacerModel;
 import com.jolles.formulaone.model.UserModel;
+import com.jolles.formulaone.utils.BinarySearchTree;
 import com.jolles.formulaone.utils.RecursionImpl;
 import com.jolles.formulaone.utils.UserSerialization;
 import javafx.application.Application;
@@ -16,7 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Objects;
 import java.util.Stack;
@@ -60,6 +61,12 @@ public class Main extends Application {
 
         for (UserModel user : stack) {
             stack.pop();
+        }
+
+        Hashtable<Integer, UserModel> userModelHashtable = new Hashtable<>();
+
+        for (UserModel user: userArray) {
+            userModelHashtable.put(user.getNumber(), user);
         }
 
         launch();
