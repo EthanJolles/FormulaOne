@@ -1,6 +1,7 @@
 module com.jolles.formulaone {
     requires javafx.controls;
     requires javafx.fxml;
+    requires hibernate.jpa;
 
 
     exports com.jolles.formulaone;

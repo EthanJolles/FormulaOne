@@ -6,7 +6,6 @@ package com.jolles.formulaone;
 //File name - DriversController.java
 
 import com.jolles.formulaone.model.UserModel;
-import com.jolles.formulaone.utils.UserSerialization;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -42,7 +41,7 @@ public class DriversController {
         }
     }
 
-    public void listDrivers(ActionEvent event) {
+/*    public void listDrivers(ActionEvent event) {
         try {
             StringBuilder sb = new StringBuilder();
             ArrayList<UserModel> userModel = (ArrayList<UserModel>) UserSerialization.read();
@@ -58,6 +57,6 @@ public class DriversController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 }

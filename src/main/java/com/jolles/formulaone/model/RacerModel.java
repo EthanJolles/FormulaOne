@@ -5,7 +5,11 @@ package com.jolles.formulaone.model;
 //Class - CMIS 201 ONL1
 //File name - RacerModel.java
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
 //This class will be used to house more comprehensive information about Users, their stats and records
+@Entity
 public class RacerModel extends UserModel {
 
     public RacerModel() {
@@ -23,10 +27,15 @@ public class RacerModel extends UserModel {
         super(name, teamName, number);
     }
 
+    @Column(name = "reliability")
     private double reliability;
+    @Column(name = "pace")
     private double pace;
+    @Column(name = "racecraft")
     private double racecraft;
+    @Column(name = "wins")
     private int wins;
+    @Column(name = "losses")
     private int losses;
 
 

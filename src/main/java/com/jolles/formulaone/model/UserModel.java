@@ -5,6 +5,7 @@ package com.jolles.formulaone.model;
 //Class - CMIS 201 ONL1
 //File name - UserModel.java
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Objects;
@@ -12,6 +13,10 @@ import java.util.Objects;
 
 //As the class name suggests, a model object of a User, should be used to represent individual Racers that a player will
 //create during their time playing the game.
+@Entity
+@Table(name = "UserModel", uniqueConstraints = {
+        @UniqueConstraint(name = "uc_usermodel_drivermap", columnNames = {"driverMap"})
+})
 public class UserModel implements Serializable {
 
     public UserModel() {
@@ -23,9 +28,14 @@ public class UserModel implements Serializable {
         this.number = number;
     }
 
+//    private HashMap<String, String> driverMap = new HashMap<>();
+    @Id
+    private Long id;
+    @Column(name = "name")
     private String name;
-    private HashMap<String, String> driverMap = new HashMap<>();
+    @Column(name = "teamName")
     private String teamName;
+    @Column(name = "number")
     private int number;
 
     public String getName() {
@@ -36,13 +46,13 @@ public class UserModel implements Serializable {
         this.name = name;
     }
 
-    public HashMap<String, String> getDriverMap() {
-        return driverMap;
-    }
-
-    public void setDriverMap(HashMap<String, String> driverMap) {
-        this.driverMap = driverMap;
-    }
+//    public HashMap<String, String> getDriverMap() {
+//        return driverMap;
+//    }
+//
+//    public void setDriverMap(HashMap<String, String> driverMap) {
+//        this.driverMap = driverMap;
+//    }
 
     public String getTeamName() {
         return teamName;

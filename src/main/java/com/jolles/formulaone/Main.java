@@ -7,9 +7,7 @@ package com.jolles.formulaone;
 
 import com.jolles.formulaone.model.RacerModel;
 import com.jolles.formulaone.model.UserModel;
-import com.jolles.formulaone.utils.BinarySearchTree;
 import com.jolles.formulaone.utils.RecursionImpl;
-import com.jolles.formulaone.utils.UserSerialization;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -43,17 +41,17 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         //Method call to make sure our Users.bin file is never empty.
-        UserSerialization.ensureMasterFileNotNull();
+//        UserSerialization.ensureMasterFileNotNull();
 
         RecursionImpl.recursion(10);
 
         Stack<RacerModel> stack = new Stack();
 
-        List<UserModel> userArray = UserSerialization.read();
+//        List<UserModel> userArray = UserSerialization.read();
 
-        for (UserModel user : userArray) {
-            stack.add((RacerModel) user);
-        }
+//        for (UserModel user : userArray) {
+//            stack.add((RacerModel) user);
+//        }
 
         for (UserModel user : stack) {
             stack.remove(user);
@@ -65,9 +63,9 @@ public class Main extends Application {
 
         Hashtable<Integer, UserModel> userModelHashtable = new Hashtable<>();
 
-        for (UserModel user: userArray) {
-            userModelHashtable.put(user.getNumber(), user);
-        }
+//        for (UserModel user: userArray) {
+//            userModelHashtable.put(user.getNumber(), user);
+//        }
 
         launch();
     }

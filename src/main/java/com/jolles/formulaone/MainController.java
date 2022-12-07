@@ -6,7 +6,6 @@ package com.jolles.formulaone;
 //File name - MainController.java
 
 import com.jolles.formulaone.model.UserModel;
-import com.jolles.formulaone.utils.UserSerialization;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -97,21 +96,21 @@ public class MainController {
     //Deserializes the master racer list and adds your new racer to it, re-serializes the list
     //with the new Object.
     //Also sets the text fields to blank so that you don't accidentally create the same racer 2+ times.
-    public void submit(ActionEvent event) {
-        try {
-            List<UserModel> master = UserSerialization.read();
-            master.add(new UserModel(
-                    nameField.getText(),
-                    teamNameField.getText(),
-                    Integer.parseInt(numberField.getText())));
-            UserSerialization.write(master);
-        } catch (NumberFormatException exc) {
-            statusLabel.setText("Enter only numbers, please");
-        } catch (Exception exc1) {
-            exc1.printStackTrace();
-        }
-        nameField.setText("");
-        teamNameField.setText("");
-        numberField.setText("");
-    }
+//    public void submit(ActionEvent event) {
+//        try {
+//            List<UserModel> master = UserSerialization.read();
+//            master.add(new UserModel(
+//                    nameField.getText(),
+//                    teamNameField.getText(),
+//                    Integer.parseInt(numberField.getText())));
+//            UserSerialization.write(master);
+//        } catch (NumberFormatException exc) {
+//            statusLabel.setText("Enter only numbers, please");
+//        } catch (Exception exc1) {
+//            exc1.printStackTrace();
+//        }
+//        nameField.setText("");
+//        teamNameField.setText("");
+//        numberField.setText("");
+//    }
 }
