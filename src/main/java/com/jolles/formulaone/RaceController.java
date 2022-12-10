@@ -9,6 +9,7 @@ import com.jolles.formulaone.model.OpponentModel;
 import com.jolles.formulaone.model.RacerModel;
 import com.jolles.formulaone.model.UserModel;
 import com.jolles.formulaone.utils.DetermineWinner;
+import com.jolles.formulaone.utils.ManageUser;
 import com.jolles.formulaone.utils.OpponentList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -106,11 +107,13 @@ public class RaceController {
             }
         }
 
-//        for (UserModel um : Objects.requireNonNull(UserSerialization.read())) {
-//            if (um.getName().equalsIgnoreCase(driverLabel.getText())) {
-//                user = um;
-//            }
-//        }
+        ManageUser service = new ManageUser();
+
+        for (UserModel um : service.getUsers()) {
+            if (um.getName().equalsIgnoreCase(driverLabel.getText())) {
+                user = um;
+            }
+        }
 
         RacerModel userRacer = new RacerModel(user.getName(), user.getTeamName(), user.getNumber());
 

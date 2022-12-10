@@ -6,6 +6,7 @@ package com.jolles.formulaone;
 //File name - SettingsController.java
 
 import com.jolles.formulaone.model.UserModel;
+import com.jolles.formulaone.utils.ManageUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,8 +14,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.persistence.Query;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class SettingsController {
@@ -37,9 +38,10 @@ public class SettingsController {
     }
 
     //Deletes all serialized data
-//    public void remove(ActionEvent event) {
-//        UserSerialization.write(new ArrayList<>());
-//    }
+    public void remove(ActionEvent event) {
+        ManageUser service = new ManageUser();
+        service.deleteUsers();
+    }
 
     //Exits the program
     public void exit(ActionEvent event) {

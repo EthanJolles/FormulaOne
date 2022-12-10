@@ -1,4 +1,4 @@
-package com.jolles.formulaone;
+package com.jolles.formulaone.utils;
 
 // The memory/space complexity of Merge Sort is O(n) for meaning it is linear related to the size of the array
 // The time complexity of Merge Sort is O(nlog(n))

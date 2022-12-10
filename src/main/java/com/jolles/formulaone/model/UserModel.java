@@ -7,7 +7,6 @@ package com.jolles.formulaone.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.Objects;
 
 
@@ -15,7 +14,7 @@ import java.util.Objects;
 //create during their time playing the game.
 @Entity
 @Table(name = "UserModel", uniqueConstraints = {
-        @UniqueConstraint(name = "uc_usermodel_drivermap", columnNames = {"driverMap"})
+@UniqueConstraint(name = "uc_usermodel_drivermap", columnNames = {"driverMap"})
 })
 public class UserModel implements Serializable {
 
@@ -28,7 +27,6 @@ public class UserModel implements Serializable {
         this.number = number;
     }
 
-//    private HashMap<String, String> driverMap = new HashMap<>();
     @Id
     private Long id;
     @Column(name = "name")
@@ -45,14 +43,6 @@ public class UserModel implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
-//    public HashMap<String, String> getDriverMap() {
-//        return driverMap;
-//    }
-//
-//    public void setDriverMap(HashMap<String, String> driverMap) {
-//        this.driverMap = driverMap;
-//    }
 
     public String getTeamName() {
         return teamName;

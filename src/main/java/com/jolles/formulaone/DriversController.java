@@ -6,6 +6,7 @@ package com.jolles.formulaone;
 //File name - DriversController.java
 
 import com.jolles.formulaone.model.UserModel;
+import com.jolles.formulaone.utils.ManageUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -41,10 +43,11 @@ public class DriversController {
         }
     }
 
-/*    public void listDrivers(ActionEvent event) {
+    public void listDrivers(ActionEvent event) {
         try {
+            ManageUser service = new ManageUser();
             StringBuilder sb = new StringBuilder();
-            ArrayList<UserModel> userModel = (ArrayList<UserModel>) UserSerialization.read();
+            List<UserModel> userModel = service.getUsers();
             for (UserModel user : Objects.requireNonNull(userModel)) {
                 sb.append(user.getName())
                         .append(" ")
@@ -57,6 +60,5 @@ public class DriversController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }*/
-
+    }
 }

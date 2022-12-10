@@ -7,6 +7,7 @@ package com.jolles.formulaone;
 
 import com.jolles.formulaone.model.RacerModel;
 import com.jolles.formulaone.model.UserModel;
+import com.jolles.formulaone.utils.ManageUser;
 import com.jolles.formulaone.utils.RecursionImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
+import org.hibernate.cfg.Configuration;
 
 import java.util.Hashtable;
 import java.util.List;
@@ -40,6 +42,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+
         //Method call to make sure our Users.bin file is never empty.
 //        UserSerialization.ensureMasterFileNotNull();
 

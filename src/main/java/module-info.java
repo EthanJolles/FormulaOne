@@ -2,6 +2,8 @@ module com.jolles.formulaone {
     requires javafx.controls;
     requires javafx.fxml;
     requires hibernate.jpa;
+    requires hibernate.core;
+    requires java.naming;
 
 
     exports com.jolles.formulaone;
